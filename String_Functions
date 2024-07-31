@@ -1,0 +1,60 @@
+public class stringFunctions{
+public static void main(String args[]){
+String s1="HELLO",s2="Hello";
+
+//no.of characters in a string
+System.out.println("Length of s1: " + s1.length());
+
+
+//equals method to check both strings same or not (Case Sensitive)
+if(s1.equals(s2))
+ System.out.println(s1 + "&" + s2 + "are same");
+else
+ System.out.println(s1 + "&" + s2 + "are not same");
+
+
+// to check both strings same or not (Case insensitive)
+if(s1.equalsIgnoreCase(s2))
+ System.out.println(s1 + "&" + s2 + "are same");
+else
+ System.out.println(s1 + "&" + s2 + "are not same");
+
+
+// find character at the given index
+System.out.println("The Character at position 2 : " + s1.charAt(2));
+//Compare first s1 and s2 and return the distance of mismatched character
+System.out.println("Distance : " + s1.compareTo(s2));
+
+
+s1="AABBCABBAA";
+// check whether the string starts with and ends with particular substrings
+System.out.println("The string " +s1+" is starts with(AAB) " + s1.startsWith("AAB"));
+System.out.println("The string " +s1+" is starts with(AAB) " + s1.endsWith("BAA"));
+
+
+// find location of first and last occurrence of substring 
+System.out.println("First index of substring (BB) : " + s1.indexOf("BB"));
+System.out.println("Last index of substring (BB) : " + s1.lastIndexOf("BB"));
+
+// Replacing a substring with new substring
+System.out.println("Replacing (ABB) to (xy) of " +s1+ "is : " + s1.replace("ABB","xy"));
+
+s2="substring from a given string";
+// Get substring from a given string
+System.out.println("Substring of "+s2 +" from 5 to 10 : " + s2.substring(5,10));
+
+
+//split the string by using (-) delimiter
+s1="This-is-String-Function";
+String[] splitArr=s1.split("-");
+System.out.println("The splitted parts are : ");
+for(String i:splitArr)
+System.out.println(i);
+
+
+//trim the black spaces from starting and ending of string.
+s2="           Spaces            ";
+System.out.println("Before Trimming : "+s2);
+System.out.println("After Trimming : "+s2.trim());
+
+}}
